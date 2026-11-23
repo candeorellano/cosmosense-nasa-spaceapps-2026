@@ -51,6 +51,9 @@ cosmosense-nasa-spaceapps-2026/
 │   ├── main.py
 │   └── requirements.txt
 └── README.md
+```
+
+---
 
 ## Instalación y Ejecución Local
 
@@ -58,23 +61,29 @@ cosmosense-nasa-spaceapps-2026/
 ```bash
 git clone [https://github.com/candeorellano/cosmosense-nasa-spaceapps-2026.git](https://github.com/candeorellano/cosmosense-nasa-spaceapps-2026.git)
 cd cosmosense-nasa-spaceapps-2026
+```
 
-### 2. Levantar el backend (/server)
+### 2. Levantar el Backend (`/server`)
 ```bash
 cd server
 python -m venv venv
 source venv/Scripts/activate   # En Windows PowerShell: .\venv\Scripts\Activate.ps1
 pip install -r requirements.txt
 python -m uvicorn main:app --reload --port 8000
+```
+*La base de datos `cosmosense.sqlite3` se genera automáticamente al iniciar el servidor.*
 
-La base de datos cosmosense.sqlite3 se genera automáticamente al iniciar el servidor.
-
-### 3. Levantar el frontend (/client)
+### 3. Levantar el Frontend (`/client`)
+En una segunda terminal:
 ```bash
 cd client
 npm install
 npm run dev
+```
+Abre `http://localhost:5173` en tu navegador.
 
-Abre http://localhost:5173 en tu navegador.
+---
 
-Autora: Desarrollado por Candela Orellano
+## Autora
+
+Desarrollado por **Candela Orellano**.
